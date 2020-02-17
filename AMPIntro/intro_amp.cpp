@@ -17,7 +17,7 @@
 #include <array>
 #include <assert.h>
 
-#define SIZE 1<<24 // same as 2^24
+#define SIZE 10000
 
 // Need to access the concurrency libraries 
 using namespace concurrency;
@@ -140,9 +140,11 @@ int main(int argc, char* argv[])
 	std::vector<double> v2(SIZE, 2.0);
 	std::vector<double> v3(SIZE, 0.0);
 
+
 	//compare a serial and parallel version of vector addtion
 	vector_add_amp(SIZE, v1, v2, v3);
 	vector_add(SIZE, v1, v2, v3);
+	
 
 	return 0;
 } // main
